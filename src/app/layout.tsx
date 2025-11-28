@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+//import { ApolloProvider } from '@apollo/client';
+import client from '../../lib/appollo_client';
+import { ApolloProvider } from "@apollo/client/react";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
         {children}
+      
       </body>
     </html>
   );
