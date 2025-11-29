@@ -124,15 +124,89 @@ export const GET_TRANSACTION_KIND = gql`
   }
 `;
 
+export const GET_OTHER_INFOS = gql `query GetTransactionEffects($digest: String!) {
+  transaction(digest: $digest) {
+    digest
+    transactionBcs
 
+    # Gas info
+    gasInput {
+      gasSponsor { address }
+      gasPrice
+    }
 
-export const GET_TRANSACTION_KIND_DETAILS = gql`
-  query TransactionKind($digest: String!) {
-    transaction(digest: $digest) {
+    # Sender
+    sender { address }
+
+    
+
+    # Effects
+    effects {
       digest
-      kind {
-        __typename
+      status
+      timestamp
+
+      # Object changes
+      objectChanges(first: 10) {
+        nodes {
+          idCreated
+          idDeleted
+          address
+
+          inputState {
+            address
+            asMoveObject {
+              address
+              contents { json }
+              owner {
+                ... on AddressOwner { address { address } }
+                ... on ObjectOwner {address { address } }
+             
+              }
+            }
+          }
+
+          outputState {
+            address
+            defaultSuinsName
+            asMoveObject {
+              address
+              contents { json }
+              owner {
+                ... on AddressOwner { address { address } }
+                ... on ObjectOwner {address { address } }
+              }
+            }
+          }
+        }
+      }
+
+      # Events
+      events(first: 5) {
+        pageInfo { hasNextPage }
+        nodes {
+          sequenceNumber
+          timestamp
+          sender { address }
+          contents { type { repr } }
+          transaction { digest }
+          transactionModule {
+            package { address }
+            name
+          }
+        }
+      }
+
+      # Balance changes
+      balanceChanges(first: 5) {
+        nodes {
+          owner { address }
+          coinType { repr signature }
+          amount
+        }
       }
     }
   }
+}
+
 `;

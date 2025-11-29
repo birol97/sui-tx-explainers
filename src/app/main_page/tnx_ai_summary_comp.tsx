@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getSummary } from "../../../ai/example";
-import { TnxAnatomy } from './transaction_kind_details';
+import { TnxAnatomy } from './interfaces/main_tnx_anatomy';
 
 
 interface TransactionSummaryProps {

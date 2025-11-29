@@ -1,7 +1,4 @@
-import { UserSummary } from "../friendly_summary";
-
-
-
+import { UserSummary } from "../interfaces/ui_ready_interfaces.tsx/effect_interfaces";
 
 
 export default function UserSummaryList({ user_summaries }: { user_summaries: UserSummary[] }) {

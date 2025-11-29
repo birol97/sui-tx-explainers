@@ -16,3 +16,21 @@ export async function get_transaction_kind_information(
   console.log("data",data.commands)
   return data;
 }
+
+
+export async function get_transaction_rest_information(
+  txdigest: string
+): Promise<any> {
+  const res = await fetch(`/api/transaction_rest?digest=${txdigest}`, {
+    method: "GET",
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch transaction information: ${res.status} ${res.statusText}`);
+  }
+
+  const data: any = await res.json();
+
+  console.log("REST data",data)
+  return data;
+}

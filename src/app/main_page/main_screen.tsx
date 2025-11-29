@@ -2,8 +2,7 @@
 import { ApolloProvider } from "@apollo/client/react";
 import client from "../../../lib/appollo_client";
 import { useState } from "react";
-import { TransactionKindViewer } from "./transaction_kind";
-import {TransactionRawInformationViever} from "./transaction_kind_details"
+import {TransactionRawInformationViever} from "./tnx_details_page"
 export default function TransactionPage1() {
   const [digestInput, setDigestInput] = useState("");
   const [digest, setDigest] = useState("");
