@@ -31,8 +31,9 @@ export function TransactionSummary({ tnx_explanation, transaction }: Transaction
 
   return (
  <>
-      <h2 className="text-xl font-bold mb-2 text-white">Summary / Explanation With ai // Demo work in progress</h2>
-
+<h2 className="text-xl font-bold mb-2 text-white text-center">
+  Transaction Summary (AI-Powered)
+</h2>
       {loading ? (
         <p>Loading...</p>
       ) : (

@@ -6,7 +6,7 @@ interface TransactionKindViewerProps {
 }
 
 export default function TransactionKindViewer({ transaction }: { transaction: TransactionKindViewerProps }) {
-    console.log("transaction in tnx command viewer",transaction.tnx)
+    
   return (
     <div className="h-80 overflow-y-auto p-2 border border-gray-700 rounded-md bg-black">
       {transaction.tnx?.map((node, index) => {
