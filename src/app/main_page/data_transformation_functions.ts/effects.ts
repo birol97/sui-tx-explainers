@@ -189,6 +189,7 @@ owner : owner
 }
 addObjectChangeToUserSummary(user_summaries, targetUser, object_change_summary);
 }
+      friendly_text += `New Object created and sended/owned by ${object_owner} \n`;
 
 
 }
