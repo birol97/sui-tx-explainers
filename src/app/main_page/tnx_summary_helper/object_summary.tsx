@@ -8,7 +8,7 @@ export default function UserSummaryList({ user_summaries }: { user_summaries: Us
         <div key={index} className="p-4 rounded-lg border border-gray-700 bg-gray-900 text-white">
           
           {/* User header */}
-          <h2 className="text-lg font-semibold mb-2">
+             <h2 className="text-lg font-semibold mb-2">
             {user.username}{" "}
             <span className="text-gray-400 text-sm">({user.useraddress})</span>
           </h2>
