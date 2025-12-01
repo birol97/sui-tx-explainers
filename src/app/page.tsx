@@ -7,7 +7,7 @@ export default function TransactionPage() {
   const [digest, setDigest] = useState('');
 
   return (
-<div className="min-h-screen [background-color:oklch(13%_0.028_261.692)]"
+<div className="min-h-screen bg-black"
 
 >
       {/* Input to type in txn digest */}
