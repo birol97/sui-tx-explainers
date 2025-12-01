@@ -189,15 +189,18 @@ export  function ProgrammableTxView( {transaction} : {transaction : TnxAnatomy})
 
 <CollapseSection title="Summary of Updated Objects">  
 
-   <h2 className="text-center">Summary of object changes in this transaction</h2>  <button
+     <button
 
-  className="bg-black text-white rounded border border-white px-4 py-2"
+  className="bg-black text-white   py-2"
 >
   Object Changes During Transaction:  
+ 
   Mutated: {numberofobj?.numbmut} |  
   Created: {numberofobj?.numbcreate} |  
   Deleted: {numberofobj?.numbdel}
 </button>
+<br>
+</br>
    {object_changes_human_friendly_summary}
 </CollapseSection>  
 

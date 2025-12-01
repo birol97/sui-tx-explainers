@@ -203,7 +203,7 @@ if(node.inputState != null && node.outputState == null){
     object_owner = null;
     input_content = node.inputState.asMoveObject.contents;
     output_content = null;
-    friendly_text += `Shared object deleted \n`;
+    friendly_text += ` \n Shared object deleted \n`;
     let action = "deleted"
     let targetUser = "Shared Object"
 let object_change_summary : ObjectChangeSummary = {
@@ -220,7 +220,7 @@ if (typeName === 'ObjectOwner' || typeName === 'AddressOwner') {
     object_owner = participants[node.inputState.asMoveObject.owner.address.address];
     input_content = node.inputState.asMoveObject.contents;
     output_content = null;
-    friendly_text += `Object owned by ${object_owner} has been deleted \n`;
+    friendly_text += `\n Object owned by ${object_owner} has been deleted \n`;
  let action = "deleted"
  let targetUser = "Shared Object"
  let object_change_summary : ObjectChangeSummary = {
@@ -253,13 +253,11 @@ if (typeName === 'ObjectOwner' || typeName === 'AddressOwner') {
     object_owner = participants[node.inputState.asMoveObject.owner.address.address];
     input_content = node.inputState.asMoveObject.contents;
     output_content = node.outputState.asMoveObject.contents;
-      friendly_text += `Object  owned by  ${object_owner} has been mutated. \n`;
+      friendly_text += `Object owned by  ${object_owner} has been mutated. \n`;
 //check if the owner changed 
 if(node.inputState.asMoveObject.owner.address.address != node.outputState.asMoveObject.owner.address.address){
 
-    console.log("Owner changed !!!!!")
-    console.log("owner before",node.outputState.asMoveObject.owner.address)
-    console.log("owner after",node.outputState.asMoveObject.owner.address.address)
+  
         object_owner = participants[node.outputState.asMoveObject.owner.address.address];
 
  friendly_text += `Object has been transferred to ${participants[node.outputState.asMoveObject.owner.address.address]} \n`;
