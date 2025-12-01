@@ -1,8 +1,8 @@
-import { TnxAnatomy } from "../interfaces/main_tnx_anatomy";
-import { Tnx_inputs } from "../interfaces/ui_ready_interfaces.tsx/effect_interfaces";
+import { TnxAnatomy } from "../interfaces/ui_ready_interfaces/main_tnx_anatomy";
+import { Tnx_inputs } from "../interfaces/ui_ready_interfaces/effect_interfaces";
 import { base64ToNumber } from "./utils";
-import { UserSummary,ObjectChangeSummary,ObjectEffect,OperationType,OwnerType,NumbObject,BalanceEffect,BalanceChangeType } from "../interfaces/ui_ready_interfaces.tsx/effect_interfaces";
-import {objects_changes,balance_changes} from "../interfaces/tnx_effects";
+import { UserSummary,ObjectChangeSummary,ObjectEffect,OperationType,OwnerType,NumbObject,BalanceEffect,BalanceChangeType } from "../interfaces/ui_ready_interfaces/effect_interfaces";
+import {objects_changes,balance_changes} from "../interfaces/ui_ready_interfaces/tnx_effects";
 
 export function get_inputs(transaction : TnxAnatomy){
 

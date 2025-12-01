@@ -18,7 +18,7 @@ ${JSON.stringify(transaction)}
     const result = await client.chat.completions.create({
       model: "gpt-5-nano",
       messages: [
-        { role: "system", content: "You are a tool that helps users understand Sui blockchain transactions in simple language." },
+        { role: "system", content: "You are a tool that helps users understand Sui blockchain transactions in simple language.No Follow up questions or later help.Just answer.prompt tokens 200" },
         { role: "user", content: prompt }
       ]
       

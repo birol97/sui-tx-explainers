@@ -1,4 +1,4 @@
-import { kind } from "../interfaces/transaction_kind_interfaces";
+import { kind } from "../interfaces/ui_ready_interfaces/transaction_kind_interfaces";
 
 export async function get_transaction_kind_information(
   txdigest: string
@@ -31,6 +31,5 @@ export async function get_transaction_rest_information(
 
   const data: any = await res.json();
 
-  console.log("REST data",data)
   return data;
 }

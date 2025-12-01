@@ -1,5 +1,5 @@
 import React from "react";
-import { tnx_commands } from "../interfaces/ui_ready_interfaces.tsx/commands_ui_ready";
+import { tnx_commands } from "../interfaces/ui_ready_interfaces/commands_ui_ready";
 
 interface TransactionKindViewerProps {
   tnx?: tnx_commands[];

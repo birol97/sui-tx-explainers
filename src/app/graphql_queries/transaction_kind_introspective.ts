@@ -4,9 +4,24 @@ import { gql } from '@apollo/client';
 export const GET_TRANSACTION_KIND = gql`
   query TransactionKind($digest: String!) {
     transaction(digest: $digest) {
+
+    expiration {
+    startTimestamp,
+    endTimestamp
+    }
         # Transaction kind details
     kind {
       __typename
+
+      ... on ConsensusCommitPrologueTransaction {
+      epoch{
+      startTimestamp,
+      endTimestamp
+      
+      }
+
+      
+      }
       ... on ProgrammableTransaction {
         # Inputs
         inputs {

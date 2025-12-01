@@ -2,7 +2,7 @@
 import {useEffect, useState } from "react";
 import {get_transaction_kind_information} from './api-functions/get_api'
 import { HumanReadableObjectSummary } from './friendly_summary';
-import { Transaction } from "./interfaces/main_tnx_anatomy";
+import { Transaction } from "./interfaces/ui_ready_interfaces/main_tnx_anatomy";
 import {get_transaction_rest_information} from './api-functions/get_api'
 import {
   Tooltip,

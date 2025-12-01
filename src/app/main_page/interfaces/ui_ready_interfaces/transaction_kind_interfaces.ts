@@ -13,8 +13,21 @@ export interface kind {
     __typename : string
     commands : commands,
     inputs : inputs
+    epoch? : ConsensusCommitPrologueTransaction
 
 }
+
+export interface ConsensusCommitPrologueTransaction{
+startTimestamp : string,
+endTimestamp : string
+
+
+}
+export interface Epoch{
+startTimestamp : string,
+endTimestamp : string
+}
+
 export interface commands{
 nodes : command_node[]
 number_of_commands : number

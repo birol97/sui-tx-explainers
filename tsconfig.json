@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/app/main_page/interfaces/ui_ready_interfaces"  ],
   "exclude": ["node_modules"]
 }

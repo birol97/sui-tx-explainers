@@ -1,5 +1,5 @@
-import { TnxAnatomy } from "../interfaces/main_tnx_anatomy";
-import { tnx_commands, MoveCallReturn, input_position } from "../interfaces/ui_ready_interfaces.tsx/commands_ui_ready";
+import { TnxAnatomy } from "../interfaces/ui_ready_interfaces/main_tnx_anatomy";
+import { tnx_commands, MoveCallReturn, input_position } from "../interfaces/ui_ready_interfaces/commands_ui_ready";
 import { base64ToNumber } from "./utils";
 export function get_tnx_commands(transaction : TnxAnatomy){
 console.log("tnxanatomy",transaction)

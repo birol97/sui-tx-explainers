@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ApolloClient, InMemoryCache, gql, HttpLink } from "@apollo/client";
 import { GET_TRANSACTION_KIND } from '../../graphql_queries/transaction_kind_introspective';
-import {ProgrammableTransactionKind,kind} from '../../main_page/interfaces/transaction_kind_interfaces'
+import {ProgrammableTransactionKind,kind} from '../../main_page/interfaces/ui_ready_interfaces/transaction_kind_interfaces'
 import fetch from "cross-fetch";
 interface TransactionKindQueryResult {
   transaction: {

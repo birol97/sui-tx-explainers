@@ -27,7 +27,7 @@ export default function TransactionPage1() {
   <h1 className="text-4xl font-extrabold text-center mb-8 
                  bg-gradient-to-r from-cyan-400 to-purple-400 
                  bg-clip-text text-transparent tracking-wide">
-    Anatomy of Transaction
+    Anatomy of a Transaction
   </h1>
 
   {/* SEARCH BAR */}

@@ -1,4 +1,4 @@
-import { TnxAnatomy } from "../interfaces/main_tnx_anatomy";
+import { TnxAnatomy } from "../interfaces/ui_ready_interfaces/main_tnx_anatomy";
 
 export function get_transaction_sender(transaction : TnxAnatomy,participants: Record<string, string>){
 console.log("Tnxanatomy",transaction)
