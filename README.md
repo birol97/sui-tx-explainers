@@ -1,6 +1,6 @@
 # Sui Transaction Explainer
 
-A Next.js application that provides detailed explanations of Sui blockchain transactions. This project is part of a referral funding program.
+A Next.js application that provides detailed explanations of Sui blockchain transactions
 
 ## Tech Stack
 
