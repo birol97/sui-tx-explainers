@@ -15,7 +15,7 @@ interface TransactionKindResult {
 // Apollo Client setup
 const client = new ApolloClient({
   link: new HttpLink({
-    uri: "https://graphql.testnet.sui.io/graphql",
+    uri: "https://graphql.mainnet.sui.io/graphql",
     fetch,
       headers: {
       "Content-Type": "application/json",
